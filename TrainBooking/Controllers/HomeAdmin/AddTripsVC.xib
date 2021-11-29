@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTripsVC" customModule="TrainBooking" customModuleProvider="target">
+            <connections>
+                <outlet property="datePicker" destination="7zp-Ww-jH8" id="jYN-or-wX6"/>
+                <outlet property="departureTextField" destination="31f-PI-lSt" id="oLs-mD-euC"/>
+                <outlet property="destinationTextField" destination="R8A-dQ-Xd9" id="bXH-45-EIm"/>
+                <outlet property="priceTextField" destination="PoX-fN-CRR" id="zxm-2T-xSW"/>
+                <outlet property="saveButton" destination="CO1-r5-0Io" id="jzM-Zi-ahN"/>
+                <outlet property="ticketOfType" destination="SSv-Cz-lZr" id="Oo4-rZ-8kY"/>
+                <outlet property="ticketTypeTextField" destination="cax-KU-qHB" id="bN9-W8-25y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wTF-re-8dV">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQh-VW-sCL">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5gb-GV-hPW">
+                                    <rect key="frame" x="20" y="100" width="374" height="330"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8te-HG-9ha">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYC-rX-5OH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="dqf-rC-38F"/>
+                                                        <constraint firstAttribute="width" constant="110" id="ftG-FD-6x2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="31f-PI-lSt">
+                                                    <rect key="frame" x="120" y="0.0" width="254" height="50"/>
+                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XT8-Rc-DSu">
+                                            <rect key="frame" x="0.0" y="70" width="374" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJH-Gt-LVo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="hp9-XP-hg8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R8A-dQ-Xd9">
+                                                    <rect key="frame" x="120" y="0.0" width="254" height="50"/>
+                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="yyB-is-SpB"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KWQ-gv-0fX">
+                                            <rect key="frame" x="0.0" y="140" width="374" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StartTime:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyr-pt-6CP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="94.5" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" priority="100" constant="110" id="O6h-qw-vUg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="If3-ce-Cda">
+                                                    <rect key="frame" x="104.5" y="0.0" width="269.5" height="50"/>
+                                                    <subviews>
+                                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7zp-Ww-jH8">
+                                                            <rect key="frame" x="0.0" y="0.0" width="269.5" height="50"/>
+                                                        </datePicker>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="7zp-Ww-jH8" secondAttribute="trailing" id="7SF-wh-3TJ"/>
+                                                        <constraint firstItem="7zp-Ww-jH8" firstAttribute="top" secondItem="If3-ce-Cda" secondAttribute="top" id="I1G-gr-4X5"/>
+                                                        <constraint firstItem="7zp-Ww-jH8" firstAttribute="leading" secondItem="If3-ce-Cda" secondAttribute="leading" id="YNm-Wy-jxX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="7zp-Ww-jH8" secondAttribute="bottom" id="j3V-zk-n0s"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="xgd-Rx-8EZ"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ddL-WV-qsD">
+                                            <rect key="frame" x="0.0" y="210" width="374" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fa-sR-O3h">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="dK2-dw-wbW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PoX-fN-CRR">
+                                                    <rect key="frame" x="120" y="0.0" width="254" height="50"/>
+                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="eVf-AL-5d8"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="blC-wk-m9I">
+                                            <rect key="frame" x="0.0" y="280" width="374" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TicketType:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQl-xC-56q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="ffV-Mg-zQB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Xdi-HV-Or3">
+                                                    <rect key="frame" x="120" y="0.0" width="254" height="50"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cax-KU-qHB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="254" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="MXN-2F-H6u"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            <connections>
+                                                                <action selector="ticketTypeAction:" destination="-1" eventType="editingDidBegin" id="GZl-Dd-85F"/>
+                                                                <action selector="ticketTypeActionEnd:" destination="-1" eventType="editingDidEnd" id="OHU-s8-le0"/>
+                                                            </connections>
+                                                        </textField>
+                                                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SSv-Cz-lZr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="254" height="0.0"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6w-yw-HBc">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="0.0"/>
+                                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                                    <state key="normal" title="Day Ticket"/>
+                                                                    <connections>
+                                                                        <action selector="dayTicketButton:" destination="-1" eventType="touchUpInside" id="44o-gg-6oK"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPU-zn-4gn">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="0.0"/>
+                                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                                    <state key="normal" title="Month Ticket"/>
+                                                                    <connections>
+                                                                        <action selector="monthTicketButton:" destination="-1" eventType="touchUpInside" id="0wM-4D-cIc"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fR4-OH-gLT">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="0.0"/>
+                                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                                    <state key="normal" title="One - way Ticket"/>
+                                                                    <connections>
+                                                                        <action selector="onewayTicketButton:" destination="-1" eventType="touchUpInside" id="HXT-AF-t6A"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CO1-r5-0Io">
+                                    <rect key="frame" x="157" y="480" width="100" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="Agr-kX-VUq"/>
+                                        <constraint firstAttribute="height" constant="50" id="xLG-Su-4eY"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="21"/>
+                                    <state key="normal" title="Save">
+                                        <color key="titleColor" red="0.4588235021" green="0.69803923369999998" blue="0.74509805439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="touchSaveInfo:" destination="-1" eventType="touchUpInside" id="1yD-eW-eeS"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="CO1-r5-0Io" firstAttribute="top" secondItem="5gb-GV-hPW" secondAttribute="bottom" constant="50" id="9QR-a4-EV7"/>
+                                <constraint firstItem="5gb-GV-hPW" firstAttribute="top" secondItem="vQh-VW-sCL" secondAttribute="top" constant="100" id="cO0-Nn-9BT"/>
+                                <constraint firstItem="CO1-r5-0Io" firstAttribute="centerX" secondItem="5gb-GV-hPW" secondAttribute="centerX" id="dXJ-eR-0Ui"/>
+                                <constraint firstItem="5gb-GV-hPW" firstAttribute="leading" secondItem="vQh-VW-sCL" secondAttribute="leading" constant="20" id="vII-1z-m2Q"/>
+                                <constraint firstAttribute="trailing" secondItem="5gb-GV-hPW" secondAttribute="trailing" constant="20" id="xPu-da-WiI"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="CO1-r5-0Io" secondAttribute="bottom" constant="30" id="xVT-OS-JHU"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="vQh-VW-sCL" firstAttribute="leading" secondItem="wTF-re-8dV" secondAttribute="leading" id="8eY-JK-22I"/>
+                        <constraint firstAttribute="bottom" secondItem="vQh-VW-sCL" secondAttribute="bottom" id="RjW-sh-4CD"/>
+                        <constraint firstAttribute="trailing" secondItem="vQh-VW-sCL" secondAttribute="trailing" id="lO5-Qo-Twz"/>
+                        <constraint firstItem="vQh-VW-sCL" firstAttribute="top" secondItem="wTF-re-8dV" secondAttribute="top" id="mny-GH-5K7"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="wTF-re-8dV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1Jx-Yz-OFE"/>
+                <constraint firstAttribute="trailing" secondItem="wTF-re-8dV" secondAttribute="trailing" id="L4B-8x-6dL"/>
+                <constraint firstItem="vQh-VW-sCL" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Ur4-cN-jze"/>
+                <constraint firstItem="vQh-VW-sCL" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" priority="750" id="arc-pw-SC4"/>
+                <constraint firstAttribute="bottom" secondItem="wTF-re-8dV" secondAttribute="bottom" id="wNc-Xh-6PV"/>
+                <constraint firstItem="wTF-re-8dV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xvA-kG-KLV"/>
+            </constraints>
+            <point key="canvasLocation" x="104" y="103"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

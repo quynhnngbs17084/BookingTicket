@@ -1,0 +1,22 @@
+PODS:
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
+  - SwiftDate (6.3.1)
+
+DEPENDENCIES:
+  - NVActivityIndicatorView (= 4.7.0)
+  - SwiftDate
+
+SPEC REPOS:
+  trunk:
+    - NVActivityIndicatorView
+    - SwiftDate
+
+SPEC CHECKSUMS:
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
+
+PODFILE CHECKSUM: 6187db45e86773da09629dc33c743db1f18cbd08
+
+COCOAPODS: 1.11.2

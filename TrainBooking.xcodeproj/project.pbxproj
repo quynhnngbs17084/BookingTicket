@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D607DB3794DBA148CE16B8CC /* Pods_TrainBooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB830FEE36A619F408C85AE1 /* Pods_TrainBooking.framework */; };
+		FD072EB2274EA53E00C5854D /* UserHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD072EB0274EA53E00C5854D /* UserHomeViewController.swift */; };
+		FD072EB3274EA53E00C5854D /* UserHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD072EB1274EA53E00C5854D /* UserHomeViewController.xib */; };
+		FD14F108274FEDC100C5050C /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14F107274FEDC100C5050C /* DateExtension.swift */; };
+		FDADDC35274BE83E00CEA790 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADDC34274BE83E00CEA790 /* AppManager.swift */; };
+		FDADDC3F274BF14900CEA790 /* AdminHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADDC3D274BF14900CEA790 /* AdminHomeCell.swift */; };
+		FDADDC40274BF14900CEA790 /* AdminHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDADDC3E274BF14900CEA790 /* AdminHomeCell.xib */; };
+		FDADDC44274BF7CC00CEA790 /* TrainInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADDC43274BF7CC00CEA790 /* TrainInfoModel.swift */; };
+		FDADDC48274BFFA900CEA790 /* AddTripsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADDC46274BFFA900CEA790 /* AddTripsVC.swift */; };
+		FDADDC49274BFFA900CEA790 /* AddTripsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDADDC47274BFFA900CEA790 /* AddTripsVC.xib */; };
+		FDAFD7D327492F8800E3DA04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFD7D227492F8800E3DA04 /* AppDelegate.swift */; };
+		FDAFD7D527492F8800E3DA04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFD7D427492F8800E3DA04 /* SceneDelegate.swift */; };
+		FDAFD7D727492F8800E3DA04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFD7D627492F8800E3DA04 /* ViewController.swift */; };
+		FDAFD7DA27492F8800E3DA04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDAFD7D827492F8800E3DA04 /* Main.storyboard */; };
+		FDAFD7DD27492F8800E3DA04 /* TrainBooking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDAFD7DB27492F8800E3DA04 /* TrainBooking.xcdatamodeld */; };
+		FDAFD7DF27492F8900E3DA04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAFD7DE27492F8900E3DA04 /* Assets.xcassets */; };
+		FDAFD7E227492F8900E3DA04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDAFD7E027492F8900E3DA04 /* LaunchScreen.storyboard */; };
+		FDAFD7F1274936EE00E3DA04 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFD7EF274936EE00E3DA04 /* TabBarItem.swift */; };
+		FDAFD7F2274936EE00E3DA04 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFD7F0274936EE00E3DA04 /* TabBarViewController.swift */; };
+		FDAFD7F7274938E800E3DA04 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFD7F5274938E800E3DA04 /* LoginViewController.swift */; };
+		FDAFD7F8274938E800E3DA04 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDAFD7F6274938E800E3DA04 /* LoginViewController.xib */; };
+		FDB294A5274A700C00790AE1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB294A3274A700C00790AE1 /* RegisterViewController.swift */; };
+		FDB294A6274A700C00790AE1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDB294A4274A700C00790AE1 /* RegisterViewController.xib */; };
+		FDB294AC274A7E2600790AE1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB294AA274A7E2600790AE1 /* HomeViewController.swift */; };
+		FDB294AD274A7E2600790AE1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDB294AB274A7E2600790AE1 /* HomeViewController.xib */; };
+		FDB294B1274A7EF100790AE1 /* ticketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB294AF274A7EF100790AE1 /* ticketViewController.swift */; };
+		FDB294B2274A7EF100790AE1 /* ticketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDB294B0274A7EF100790AE1 /* ticketViewController.xib */; };
+		FDB294B6274A7FB300790AE1 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB294B4274A7FB300790AE1 /* profileViewController.swift */; };
+		FDB294B7274A7FB400790AE1 /* profileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDB294B5274A7FB300790AE1 /* profileViewController.xib */; };
+		FDB294C5274AB55A00790AE1 /* ticketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB294C3274AB55A00790AE1 /* ticketTableViewCell.swift */; };
+		FDB294C6274AB55A00790AE1 /* ticketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDB294C4274AB55A00790AE1 /* ticketTableViewCell.xib */; };
+		FDB294CB274AC48B00790AE1 /* paymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB294C9274AC48B00790AE1 /* paymentViewController.swift */; };
+		FDB294CC274AC48B00790AE1 /* paymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDB294CA274AC48B00790AE1 /* paymentViewController.xib */; };
+		FDCD39312751D1C60044382B /* LoadingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39302751D1C60044382B /* LoadingActivity.swift */; };
+		FDCD39382751D48C0044382B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39372751D48C0044382B /* UIColorExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB830FEE36A619F408C85AE1 /* Pods_TrainBooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainBooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3E9B48B1E2451913B330C8A /* Pods-TrainBooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainBooking.release.xcconfig"; path = "Target Support Files/Pods-TrainBooking/Pods-TrainBooking.release.xcconfig"; sourceTree = "<group>"; };
+		E5566DC31F99410A5F1B461A /* Pods-TrainBooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainBooking.debug.xcconfig"; path = "Target Support Files/Pods-TrainBooking/Pods-TrainBooking.debug.xcconfig"; sourceTree = "<group>"; };
+		FD072EB0274EA53E00C5854D /* UserHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeViewController.swift; sourceTree = "<group>"; };
+		FD072EB1274EA53E00C5854D /* UserHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHomeViewController.xib; sourceTree = "<group>"; };
+		FD14F107274FEDC100C5050C /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = TrainBooking/Common/DateExtension.swift; sourceTree = SOURCE_ROOT; };
+		FDADDC34274BE83E00CEA790 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		FDADDC3D274BF14900CEA790 /* AdminHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeCell.swift; sourceTree = "<group>"; };
+		FDADDC3E274BF14900CEA790 /* AdminHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminHomeCell.xib; sourceTree = "<group>"; };
+		FDADDC43274BF7CC00CEA790 /* TrainInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainInfoModel.swift; sourceTree = "<group>"; };
+		FDADDC46274BFFA900CEA790 /* AddTripsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripsVC.swift; sourceTree = "<group>"; };
+		FDADDC47274BFFA900CEA790 /* AddTripsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTripsVC.xib; sourceTree = "<group>"; };
+		FDAFD7CF27492F8800E3DA04 /* TrainBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDAFD7D227492F8800E3DA04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDAFD7D427492F8800E3DA04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FDAFD7D627492F8800E3DA04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDAFD7D927492F8800E3DA04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDAFD7DC27492F8800E3DA04 /* TrainBooking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrainBooking.xcdatamodel; sourceTree = "<group>"; };
+		FDAFD7DE27492F8900E3DA04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDAFD7E127492F8900E3DA04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDAFD7E327492F8900E3DA04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDAFD7EF274936EE00E3DA04 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		FDAFD7F0274936EE00E3DA04 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		FDAFD7F5274938E800E3DA04 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FDAFD7F6274938E800E3DA04 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		FDB294A3274A700C00790AE1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FDB294A4274A700C00790AE1 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		FDB294AA274A7E2600790AE1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FDB294AB274A7E2600790AE1 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FDB294AF274A7EF100790AE1 /* ticketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ticketViewController.swift; sourceTree = "<group>"; };
+		FDB294B0274A7EF100790AE1 /* ticketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ticketViewController.xib; sourceTree = "<group>"; };
+		FDB294B4274A7FB300790AE1 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		FDB294B5274A7FB300790AE1 /* profileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profileViewController.xib; sourceTree = "<group>"; };
+		FDB294C3274AB55A00790AE1 /* ticketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ticketTableViewCell.swift; sourceTree = "<group>"; };
+		FDB294C4274AB55A00790AE1 /* ticketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ticketTableViewCell.xib; sourceTree = "<group>"; };
+		FDB294C9274AC48B00790AE1 /* paymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymentViewController.swift; sourceTree = "<group>"; };
+		FDB294CA274AC48B00790AE1 /* paymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = paymentViewController.xib; sourceTree = "<group>"; };
+		FDCD39302751D1C60044382B /* LoadingActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingActivity.swift; sourceTree = "<group>"; };
+		FDCD39372751D48C0044382B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDAFD7CC27492F8800E3DA04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D607DB3794DBA148CE16B8CC /* Pods_TrainBooking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B45E465E55E15A04025DFAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB830FEE36A619F408C85AE1 /* Pods_TrainBooking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C10A3A52A36C1408709E666 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5566DC31F99410A5F1B461A /* Pods-TrainBooking.debug.xcconfig */,
+				E3E9B48B1E2451913B330C8A /* Pods-TrainBooking.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FD072EA8274EA4A600C5854D /* HomeUser */ = {
+			isa = PBXGroup;
+			children = (
+				FD072EB0274EA53E00C5854D /* UserHomeViewController.swift */,
+				FD072EB1274EA53E00C5854D /* UserHomeViewController.xib */,
+			);
+			path = HomeUser;
+			sourceTree = "<group>";
+		};
+		FD29C0CA274FAC1F00C37FE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FDAFD7EC2749357E00E3DA04 /* TabBar */,
+				FDAFD7F4274938B800E3DA04 /* Login */,
+				FDB294A2274A6FAF00790AE1 /* Register */,
+				FDADDC37274BEBDD00CEA790 /* HomeAdmin */,
+				FD072EA8274EA4A600C5854D /* HomeUser */,
+				FDB294B9274AB34700790AE1 /* Ticket */,
+				FD29C0CC274FB2DE00C37FE7 /* Profile */,
+				FD29C0D0274FB31600C37FE7 /* Payment */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FD29C0CC274FB2DE00C37FE7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FDB294B4274A7FB300790AE1 /* profileViewController.swift */,
+				FDB294B5274A7FB300790AE1 /* profileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FD29C0D0274FB31600C37FE7 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				FDB294C9274AC48B00790AE1 /* paymentViewController.swift */,
+				FDB294CA274AC48B00790AE1 /* paymentViewController.xib */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		FDADDC33274BE81100CEA790 /* AppManager */ = {
+			isa = PBXGroup;
+			children = (
+				FDADDC34274BE83E00CEA790 /* AppManager.swift */,
+			);
+			path = AppManager;
+			sourceTree = "<group>";
+		};
+		FDADDC37274BEBDD00CEA790 /* HomeAdmin */ = {
+			isa = PBXGroup;
+			children = (
+				FDADDC3C274BF0D200CEA790 /* HomeCells */,
+				FDB294AA274A7E2600790AE1 /* HomeViewController.swift */,
+				FDB294AB274A7E2600790AE1 /* HomeViewController.xib */,
+				FDADDC46274BFFA900CEA790 /* AddTripsVC.swift */,
+				FDADDC47274BFFA900CEA790 /* AddTripsVC.xib */,
+			);
+			path = HomeAdmin;
+			sourceTree = "<group>";
+		};
+		FDADDC3C274BF0D200CEA790 /* HomeCells */ = {
+			isa = PBXGroup;
+			children = (
+				FDADDC3D274BF14900CEA790 /* AdminHomeCell.swift */,
+				FDADDC3E274BF14900CEA790 /* AdminHomeCell.xib */,
+			);
+			path = HomeCells;
+			sourceTree = "<group>";
+		};
+		FDADDC42274BF7A900CEA790 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDADDC43274BF7CC00CEA790 /* TrainInfoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDAFD7C627492F8800E3DA04 = {
+			isa = PBXGroup;
+			children = (
+				FDAFD7D127492F8800E3DA04 /* TrainBooking */,
+				FDAFD7D027492F8800E3DA04 /* Products */,
+				2C10A3A52A36C1408709E666 /* Pods */,
+				2B45E465E55E15A04025DFAD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FDAFD7D027492F8800E3DA04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDAFD7CF27492F8800E3DA04 /* TrainBooking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDAFD7D127492F8800E3DA04 /* TrainBooking */ = {
+			isa = PBXGroup;
+			children = (
+				FDADDC42274BF7A900CEA790 /* Models */,
+				FDCD392F2751D19A0044382B /* Common */,
+				FDADDC33274BE81100CEA790 /* AppManager */,
+				FD29C0CA274FAC1F00C37FE7 /* Controllers */,
+				FDAFD7D227492F8800E3DA04 /* AppDelegate.swift */,
+				FDAFD7D427492F8800E3DA04 /* SceneDelegate.swift */,
+				FDAFD7D627492F8800E3DA04 /* ViewController.swift */,
+				FDAFD7D827492F8800E3DA04 /* Main.storyboard */,
+				FDAFD7DE27492F8900E3DA04 /* Assets.xcassets */,
+				FDAFD7E027492F8900E3DA04 /* LaunchScreen.storyboard */,
+				FDAFD7E327492F8900E3DA04 /* Info.plist */,
+				FDAFD7DB27492F8800E3DA04 /* TrainBooking.xcdatamodeld */,
+			);
+			path = TrainBooking;
+			sourceTree = "<group>";
+		};
+		FDAFD7EC2749357E00E3DA04 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FDAFD7EF274936EE00E3DA04 /* TabBarItem.swift */,
+				FDAFD7F0274936EE00E3DA04 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		FDAFD7F4274938B800E3DA04 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FDAFD7F5274938E800E3DA04 /* LoginViewController.swift */,
+				FDAFD7F6274938E800E3DA04 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FDB294A2274A6FAF00790AE1 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				FDB294A3274A700C00790AE1 /* RegisterViewController.swift */,
+				FDB294A4274A700C00790AE1 /* RegisterViewController.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		FDB294B9274AB34700790AE1 /* Ticket */ = {
+			isa = PBXGroup;
+			children = (
+				FDB294C2274AB54100790AE1 /* tableCell */,
+				FDB294AF274A7EF100790AE1 /* ticketViewController.swift */,
+				FDB294B0274A7EF100790AE1 /* ticketViewController.xib */,
+			);
+			path = Ticket;
+			sourceTree = "<group>";
+		};
+		FDB294C2274AB54100790AE1 /* tableCell */ = {
+			isa = PBXGroup;
+			children = (
+				FDB294C3274AB55A00790AE1 /* ticketTableViewCell.swift */,
+				FDB294C4274AB55A00790AE1 /* ticketTableViewCell.xib */,
+			);
+			path = tableCell;
+			sourceTree = "<group>";
+		};
+		FDCD392F2751D19A0044382B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FDCD39302751D1C60044382B /* LoadingActivity.swift */,
+				FDCD39372751D48C0044382B /* UIColorExtension.swift */,
+				FD14F107274FEDC100C5050C /* DateExtension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDAFD7CE27492F8800E3DA04 /* TrainBooking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDAFD7E627492F8900E3DA04 /* Build configuration list for PBXNativeTarget "TrainBooking" */;
+			buildPhases = (
+				50D80765E464F18322424BB2 /* [CP] Check Pods Manifest.lock */,
+				FDAFD7CB27492F8800E3DA04 /* Sources */,
+				FDAFD7CC27492F8800E3DA04 /* Frameworks */,
+				FDAFD7CD27492F8800E3DA04 /* Resources */,
+				C39469888276294FBD28F5CC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrainBooking;
+			productName = TrainBooking;
+			productReference = FDAFD7CF27492F8800E3DA04 /* TrainBooking.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDAFD7C727492F8800E3DA04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					FDAFD7CE27492F8800E3DA04 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = FDAFD7CA27492F8800E3DA04 /* Build configuration list for PBXProject "TrainBooking" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDAFD7C627492F8800E3DA04;
+			productRefGroup = FDAFD7D027492F8800E3DA04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDAFD7CE27492F8800E3DA04 /* TrainBooking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDAFD7CD27492F8800E3DA04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDAFD7F8274938E800E3DA04 /* LoginViewController.xib in Resources */,
+				FDADDC40274BF14900CEA790 /* AdminHomeCell.xib in Resources */,
+				FDB294A6274A700C00790AE1 /* RegisterViewController.xib in Resources */,
+				FDADDC49274BFFA900CEA790 /* AddTripsVC.xib in Resources */,
+				FD072EB3274EA53E00C5854D /* UserHomeViewController.xib in Resources */,
+				FDB294C6274AB55A00790AE1 /* ticketTableViewCell.xib in Resources */,
+				FDB294B7274A7FB400790AE1 /* profileViewController.xib in Resources */,
+				FDAFD7E227492F8900E3DA04 /* LaunchScreen.storyboard in Resources */,
+				FDB294AD274A7E2600790AE1 /* HomeViewController.xib in Resources */,
+				FDB294B2274A7EF100790AE1 /* ticketViewController.xib in Resources */,
+				FDAFD7DF27492F8900E3DA04 /* Assets.xcassets in Resources */,
+				FDAFD7DA27492F8800E3DA04 /* Main.storyboard in Resources */,
+				FDB294CC274AC48B00790AE1 /* paymentViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50D80765E464F18322424BB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrainBooking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C39469888276294FBD28F5CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrainBooking/Pods-TrainBooking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrainBooking/Pods-TrainBooking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrainBooking/Pods-TrainBooking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDAFD7CB27492F8800E3DA04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDAFD7F7274938E800E3DA04 /* LoginViewController.swift in Sources */,
+				FDB294AC274A7E2600790AE1 /* HomeViewController.swift in Sources */,
+				FDAFD7DD27492F8800E3DA04 /* TrainBooking.xcdatamodeld in Sources */,
+				FDAFD7D727492F8800E3DA04 /* ViewController.swift in Sources */,
+				FDB294CB274AC48B00790AE1 /* paymentViewController.swift in Sources */,
+				FD14F108274FEDC100C5050C /* DateExtension.swift in Sources */,
+				FDB294A5274A700C00790AE1 /* RegisterViewController.swift in Sources */,
+				FD072EB2274EA53E00C5854D /* UserHomeViewController.swift in Sources */,
+				FDCD39382751D48C0044382B /* UIColorExtension.swift in Sources */,
+				FDAFD7F1274936EE00E3DA04 /* TabBarItem.swift in Sources */,
+				FDADDC35274BE83E00CEA790 /* AppManager.swift in Sources */,
+				FDB294B6274A7FB300790AE1 /* profileViewController.swift in Sources */,
+				FDADDC48274BFFA900CEA790 /* AddTripsVC.swift in Sources */,
+				FDB294B1274A7EF100790AE1 /* ticketViewController.swift in Sources */,
+				FDADDC44274BF7CC00CEA790 /* TrainInfoModel.swift in Sources */,
+				FDADDC3F274BF14900CEA790 /* AdminHomeCell.swift in Sources */,
+				FDAFD7D327492F8800E3DA04 /* AppDelegate.swift in Sources */,
+				FDAFD7F2274936EE00E3DA04 /* TabBarViewController.swift in Sources */,
+				FDAFD7D527492F8800E3DA04 /* SceneDelegate.swift in Sources */,
+				FDB294C5274AB55A00790AE1 /* ticketTableViewCell.swift in Sources */,
+				FDCD39312751D1C60044382B /* LoadingActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FDAFD7D827492F8800E3DA04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDAFD7D927492F8800E3DA04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FDAFD7E027492F8900E3DA04 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDAFD7E127492F8900E3DA04 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDAFD7E427492F8900E3DA04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FDAFD7E527492F8900E3DA04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDAFD7E727492F8900E3DA04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5566DC31F99410A5F1B461A /* Pods-TrainBooking.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrainBooking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.free.demo.TrainBooking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FDAFD7E827492F8900E3DA04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3E9B48B1E2451913B330C8A /* Pods-TrainBooking.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrainBooking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.free.demo.TrainBooking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDAFD7CA27492F8800E3DA04 /* Build configuration list for PBXProject "TrainBooking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDAFD7E427492F8900E3DA04 /* Debug */,
+				FDAFD7E527492F8900E3DA04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDAFD7E627492F8900E3DA04 /* Build configuration list for PBXNativeTarget "TrainBooking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDAFD7E727492F8900E3DA04 /* Debug */,
+				FDAFD7E827492F8900E3DA04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FDAFD7DB27492F8800E3DA04 /* TrainBooking.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FDAFD7DC27492F8800E3DA04 /* TrainBooking.xcdatamodel */,
+			);
+			currentVersion = FDAFD7DC27492F8800E3DA04 /* TrainBooking.xcdatamodel */;
+			path = TrainBooking.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FDAFD7C727492F8800E3DA04 /* Project object */;
+}
