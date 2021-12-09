@@ -5,7 +5,6 @@ import CoreData
 
 class AddTripsVC: UIViewController {
     
-    //MARK: - Outlets, Action
     @IBOutlet weak var departureTextField: UITextField!
     @IBOutlet weak var destinationTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -42,10 +41,8 @@ class AddTripsVC: UIViewController {
         ticketOfType.isHidden = true
     }
     
-    //MARK: Variables
     var ticketType: Int? = 1
     
-    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Add Route"
@@ -56,18 +53,15 @@ class AddTripsVC: UIViewController {
         
     }
     
-    //save train trip information
     func save() {
         guard let appDelegate =
                 UIApplication.shared.delegate as? AppDelegate else {
             return
         }
         
-        // 1
         let managedContext =
             appDelegate.persistentContainer.viewContext
         
-        // 2
         let entity =
             NSEntityDescription.entity(forEntityName: "TripInfo",
                                        in: managedContext)!
@@ -75,7 +69,6 @@ class AddTripsVC: UIViewController {
         let trip = NSManagedObject(entity: entity,
                                    insertInto: managedContext)
         
-        // 3
         guard let departure = self.departureTextField.text, !departure.isEmpty else { return }
         trip.setValue(departure, forKeyPath: "departure")
         
@@ -90,18 +83,12 @@ class AddTripsVC: UIViewController {
         guard let ticketType = self.ticketType else { return }
         trip.setValue(ticketType, forKey: "ticketType")
         
-        var tripID = AppManager.shared.lastTripID
+        let tripID = AppManager.shared.lastTripID
         trip.setValue(tripID, forKey: "tripID")
         AppManager.shared.lastTripID += 1
         
-//        var tripID = AppManager.shared.lastTripID
-//        trip.setValue(tripID, forkey: "tripID")
-//        tripID += 1
-        
-        // 4
         do {
             try managedContext.save()
-            // clear current input
             self.showAlert()
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")

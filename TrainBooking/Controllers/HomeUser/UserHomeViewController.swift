@@ -4,7 +4,6 @@ import CoreData
 
 class UserHomeViewController: UIViewController {
     
-    //MARK: - Outlets
     @IBOutlet weak var userHomeTable: UITableView!
     @IBOutlet weak var departureTextField: UITextField!
     @IBOutlet weak var destinationTextField: UITextField!
@@ -12,11 +11,9 @@ class UserHomeViewController: UIViewController {
     
     @IBOutlet weak var searchButton: UIButton!
     
-    //MARK: - Variables
     var tripList: [NSManagedObject] = []
     var filterData: [NSManagedObject] = []
     
-    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Metro Sai Gon"
@@ -30,18 +27,15 @@ class UserHomeViewController: UIViewController {
     }
     
     @IBAction func touchSearchButton(_ sender: Any) {
-        //lọc dữ liệu theo điều kiện customer đưa ra
+
         LoadingActivity.shared.showLoadding {_ in
             self.filterData = self.tripList.filter { ($0.value(forKey: "departure") as! String).withoutDiaracting().contains((self.departureTextField.text ?? "").withoutDiaracting()) || ($0.value(forKey: "destination") as! String).withoutDiaracting().contains((self.destinationTextField.text ?? "").withoutDiaracting()) || (Date($0.value(forKey: "startTime") as? String ?? Date().fullTimeString))?.day == self.datePicker.date.day }
             self.userHomeTable.reloadData()
         }
-        
-        //let dateString = d
     }
     
-    
     func fetchDataFormDB() {
-        //1
+
         guard let appDelegate =
                 UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -49,12 +43,10 @@ class UserHomeViewController: UIViewController {
         
         let managedContext =
             appDelegate.persistentContainer.viewContext
-        
-        //2
+
         let fetchRequest =
             NSFetchRequest<NSManagedObject>(entityName: "TripInfo")
         
-        //3
         do {
             tripList = try managedContext.fetch(fetchRequest)
             self.filterData = self.tripList
@@ -64,10 +56,8 @@ class UserHomeViewController: UIViewController {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
-    
-    
 }
-//MARK: - UITableViewDataSource
+
 extension UserHomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filterData.count
@@ -78,8 +68,8 @@ extension UserHomeViewController: UITableViewDataSource {
         let cell = userHomeTable.dequeueReusableCell(withIdentifier: "AdminHomeCell", for: indexPath) as! AdminHomeCell
         cell.fillDataFormDB(model: self.filterData[indexPath.row])
         
-        cell.didBuyTicket = {[weak self] quantity in //Closure
-            // go to payment screen
+        cell.didBuyTicket = {[weak self] quantity in
+
             if quantity > 0 {
                 let paymentVC = paymentViewController()
                 paymentVC.quantityTickets = quantity
@@ -95,13 +85,10 @@ extension UserHomeViewController: UITableViewDataSource {
                 alert.addAction(okAction)
                 self?.navigationController?.present(alert, animated: true, completion: nil)
             }
-            
         }
         
         return cell
     }
-    
-    
 }
 
 extension String {

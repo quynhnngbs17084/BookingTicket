@@ -4,7 +4,6 @@ import CoreData
 
 class RegisterViewController: UIViewController {
 
-    //MARK: - Outlets, Actions
     @IBOutlet weak var fullnameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -13,9 +12,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     
     @IBAction func touchBackButton(_ sender: Any) {
-        //unwrap viewcontrollers
+        
         if let vcs = self.navigationController?.viewControllers.count, vcs > 1  {
-            //back to login View Controller
+            
             self.navigationController?.popViewController(animated: true)
         }
     }
@@ -40,14 +39,12 @@ class RegisterViewController: UIViewController {
         self.registerButton.isEnabled = self.checkInput()
     }
     
-    //action button Register
     @IBAction func touchRegisterButton(_ sender: Any) {
         
         LoadingActivity.shared.show()
         self.save()
     }
     
-    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -60,7 +57,7 @@ class RegisterViewController: UIViewController {
     }
     
     func checkInput() -> Bool {
-        //validate input
+        
         guard let fullname = self.fullnameTextField.text, !fullname.isEmpty else {
             //!fullname.isEmpty ~ fullname.isEmpty == false
             return false
@@ -85,26 +82,22 @@ class RegisterViewController: UIViewController {
         return true
     }
 
-    //save user information
     func save() {
         guard let appDelegate =
                 UIApplication.shared.delegate as? AppDelegate else {
             return
         }
-        
-        // 1
+
         let managedContext =
             appDelegate.persistentContainer.viewContext
-        
-        // 2
+
         let entity =
             NSEntityDescription.entity(forEntityName: "UserInfo",
                                        in: managedContext)!
         
         let user = NSManagedObject(entity: entity,
                                    insertInto: managedContext)
-        
-        // 3
+
         guard let name = self.fullnameTextField.text, !name.isEmpty else { return }
         user.setValue(name, forKeyPath: "name")
         
@@ -121,9 +114,8 @@ class RegisterViewController: UIViewController {
         user.setValue(password, forKey: "password")
         
         user.setValue(AppManager.shared.userID, forKey: "userID")
-        AppManager.shared.userID += 1 //update userID for next user
-        
-        // 4
+        AppManager.shared.userID += 1
+
         do {
             try managedContext.save()
             LoadingActivity.shared.hideAfter {

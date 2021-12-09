@@ -45,19 +45,19 @@ enum MTabbarItem {
             } else {
                 viewController = UserHomeViewController()
             }
-            viewController.view.backgroundColor = .yellow
+            viewController.view.backgroundColor = #colorLiteral(red: 0.3775631785, green: 0.7059502006, blue: 0.7527877688, alpha: 1)
             viewController.tabBarItem = self.item
             let nv = UINavigationController(rootViewController: viewController)
             return nv
         case .tickets:
             let viewController = ticketViewController()
-            viewController.view.backgroundColor = .orange
+            viewController.view.backgroundColor = #colorLiteral(red: 0.0006976110744, green: 0.2911278605, blue: 0.414753288, alpha: 1)
             viewController.tabBarItem = self.item
             let nv = UINavigationController(rootViewController: viewController)
             return nv
         case .info:
             let viewController = profileViewController()
-            viewController.view.backgroundColor = .cyan
+            viewController.view.backgroundColor = #colorLiteral(red: 0.3775631785, green: 0.7059502006, blue: 0.7527877688, alpha: 1)
             viewController.tabBarItem = self.item
             let nv = UINavigationController(rootViewController: viewController)
             return nv

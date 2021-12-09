@@ -164,7 +164,7 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6w-yw-HBc">
                                                                     <rect key="frame" x="0.0" y="0.0" width="254" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
-                                                                    <state key="normal" title="Day Ticket"/>
+                                                                    <state key="normal" title="Round Trip Ticket"/>
                                                                     <connections>
                                                                         <action selector="dayTicketButton:" destination="-1" eventType="touchUpInside" id="44o-gg-6oK"/>
                                                                     </connections>
@@ -172,7 +172,7 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPU-zn-4gn">
                                                                     <rect key="frame" x="0.0" y="0.0" width="254" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
-                                                                    <state key="normal" title="Month Ticket"/>
+                                                                    <state key="normal" title="Monthly Ticket"/>
                                                                     <connections>
                                                                         <action selector="monthTicketButton:" destination="-1" eventType="touchUpInside" id="0wM-4D-cIc"/>
                                                                     </connections>

@@ -4,7 +4,6 @@ import CoreData
 
 class profileViewController: UIViewController {
 
-    //MARK: - Outlets, Actions
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var logoutButton: UIButton!
     
@@ -20,7 +19,6 @@ class profileViewController: UIViewController {
         }
     }
     
-    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Profile"
@@ -42,7 +40,6 @@ class profileViewController: UIViewController {
         }
         
         Utilities.styleFilledButton(logoutButton)
-        
     }
 
     func autolayoutImageView() {
@@ -61,7 +58,7 @@ class profileViewController: UIViewController {
     
     func fetchDataFormDB() {
         var users = [NSManagedObject]()
-        //1
+
         guard let appDelegate =
           UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -69,12 +66,10 @@ class profileViewController: UIViewController {
         
         let managedContext =
           appDelegate.persistentContainer.viewContext
-        
-        //2
+
         let fetchRequest =
           NSFetchRequest<NSManagedObject>(entityName: "UserInfo")
-        
-        //3
+
         do {
           users = try managedContext.fetch(fetchRequest)
             if let user = users.last {
@@ -87,7 +82,7 @@ class profileViewController: UIViewController {
     }
     
     func fillDataFormDB(model: NSManagedObject) {
-        // parser data from NSManagedObject
+
         if let name = model.value(forKey: "name") as? String {
             self.nametxt.text = name
         }
@@ -103,19 +98,5 @@ class profileViewController: UIViewController {
         if let phoneNumber = model.value(forKey: "phoneNumber") as? String {
             self.phoneNumbertxt.text = phoneNumber
         }
-        
-        
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

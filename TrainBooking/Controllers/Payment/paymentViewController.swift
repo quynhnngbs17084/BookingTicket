@@ -4,7 +4,6 @@ import CoreData
 
 class paymentViewController: UIViewController {
     
-    //MARK: - Outlets
     @IBOutlet weak var departure: UILabel!
     @IBOutlet weak var destination: UILabel!
     @IBOutlet weak var schedule: UILabel!
@@ -14,11 +13,9 @@ class paymentViewController: UIViewController {
     
     @IBOutlet weak var OKbutton: UIButton!
     
-    //MARK: - Variables
     var quantityTickets: Int!
     var ticketInfo: NSManagedObject!
-    
-    //MARK: - LifeCycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Booking Ticket"
@@ -44,7 +41,6 @@ class paymentViewController: UIViewController {
     
     
     func layoutOKbutton() {
-        //OKbutton.layer.masksToBounds = true
         OKbutton.layer.borderWidth = 1
         OKbutton.layer.cornerRadius = 20
         
@@ -82,20 +78,17 @@ class paymentViewController: UIViewController {
                 UIApplication.shared.delegate as? AppDelegate else {
             return
         }
-        
-        // 1
+
         let managedContext =
             appDelegate.persistentContainer.viewContext
-        
-        // 2
+
         let entity =
             NSEntityDescription.entity(forEntityName: "MyTicketInfo",
                                        in: managedContext)!
         
         let ticket = NSManagedObject(entity: entity,
                                    insertInto: managedContext)
-        
-        // 3
+
         guard let departure = self.departure.text, !departure.isEmpty else { return }
         ticket.setValue(departure, forKeyPath: "departure")
         
@@ -116,8 +109,7 @@ class paymentViewController: UIViewController {
         
         let currentUserID = AppManager.shared.userInfo?.value(forKey: "userID") as! Int
         ticket.setValue(currentUserID, forKey: "purchaseUserID")
-        
-        // 4
+
         do {
             try managedContext.save()
             self.updateTotalTrip(tripID: self.ticketInfo.value(forKey: "tripID") as! Int, quantity: self.quantityTickets)
@@ -134,15 +126,13 @@ class paymentViewController: UIViewController {
         
         let managedContext =
           appDelegate.persistentContainer.viewContext
-        
-        //2
+
         let fetchRequest =
           NSFetchRequest<NSManagedObject>(entityName: "TripInfo")
-        
-        //3
+
         do {
           let trips = try managedContext.fetch(fetchRequest)
-            if let trip = (trips.filter { $0.value(forKey: "tripID") as! Int == tripID}).first  {
+            if let trip = (trips.filter { $0.value(forKey: "tripID") as! Int == tripID}).first {
                 let oldValue = trip.value(forKey: "bookingTotal") as! Int
                 trip.setValue(oldValue + quantity, forKey: "bookingTotal")
                 

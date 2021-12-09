@@ -4,7 +4,6 @@ import CoreData
 
 class ticketTableViewCell: UITableViewCell {
 
-    //MARK: - Outlets
     @IBOutlet weak var ticketView: UIView!
     @IBOutlet weak var departureLabel: UILabel!
     @IBOutlet weak var destinationLabel: UILabel!
@@ -13,16 +12,11 @@ class ticketTableViewCell: UITableViewCell {
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     
-    
-    //MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setupView()
-        // Initialization code
     }
-    
-    
-    //show data from DB
+
     func fillData(data: NSManagedObject) {
         if let from = data.value(forKey: "departure") as? String {
             self.departureLabel.text = from
@@ -52,16 +46,13 @@ class ticketTableViewCell: UITableViewCell {
     }
     
     func setupView() {
-        //ticketView.layer.masksToBounds = false
         ticketView.layer.borderWidth = 2
-        ticketView.layer.borderColor = UIColor.black.cgColor//CGColor(red: 1/255, green: 1/255, blue: 1/255, alpha: 1)
+        ticketView.layer.borderColor = UIColor.black.cgColor
         
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

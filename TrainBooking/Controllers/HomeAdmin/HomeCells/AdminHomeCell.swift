@@ -58,19 +58,16 @@ class AdminHomeCell: UITableViewCell {
     }
     
     
-    //MARK: - Variables
     var didBuyTicket: ((Int) -> Void)?
     
-    //MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     func setupCell(model: TrainInfoModel) {
@@ -82,7 +79,7 @@ class AdminHomeCell: UITableViewCell {
     }
     
     func fillDataFormDB(model: NSManagedObject) {
-        // parser data from NSManagedObject
+        
         if let departure = model.value(forKey: "departure") as? String {
             self.departureLabel.text = departure
         }
